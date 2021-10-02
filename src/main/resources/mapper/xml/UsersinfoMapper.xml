@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.UsersinfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.demo.entity.Usersinfo">
+        <id column="customerId" property="customerId" />
+        <result column="customerName" property="customerName" />
+        <result column="account" property="account" />
+        <result column="password" property="password" />
+        <result column="points" property="points" />
+        <result column="allergen" property="allergen" />
+        <result column="addressId" property="addressId" />
+    </resultMap>
+
+    <select id="getByAccount" parameterType="String" resultType="Usersinfo">
+         select * from usersinfo
+         where account=#{account}
+    </select>
+
+</mapper>

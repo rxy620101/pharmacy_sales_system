@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.ShoppingcartMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.demo.entity.Shoppingcart">
+        <id column="shoppingId" property="shoppingId" />
+        <result column="customerId" property="customerId" />
+        <result column="medicineId" property="medicineId" />
+        <result column="medicineNumber" property="medicineNumber" />
+        <result column="medicinePrice" property="medicinePrice" />
+    </resultMap>
+
+</mapper>
